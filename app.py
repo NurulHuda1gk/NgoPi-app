@@ -37,6 +37,7 @@ if st.button("☕ Seduh Teks (Generate)"):
                 2. Khotbah Pertama WAJIB mengandung rukun formal: Pujian kepada Allah (Alhamdulillah), Shalawat, Wasiat Takwa, dan minimal satu potong Ayat Al-Qur'an/Hadits yang sesuai tema.
                 3. Gunakan bahasa Indonesia yang santun, sejuk, mengayomi, dan mudah dipahami masyarakat.
                 4. Khotbah Kedua wajib berisi kesimpulan singkat dan doa penutup berbahasa Arab.
+                5. Tersedia Khutbah Jum'at Bahasa Sunda
                 """
                 
                 # Menggunakan model alternatif gratis yang kapasitasnya sangat longgar
