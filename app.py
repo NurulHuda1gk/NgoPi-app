@@ -42,7 +42,7 @@ if st.button("☕ Seduh Teks (Generate)"):
                 
                 # Menggunakan model alternatif gratis yang kapasitasnya sangat longgar
                 payload = {
-                    "model": "mistralai/mistral-7b-instruct:free",
+                    "model": "meta-llama/llama-3-8b-instruct:free",
                     "messages": [{"role": "user", "content": prompt_sistem}]
                 }
                 
