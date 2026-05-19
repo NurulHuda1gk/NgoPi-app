@@ -17,7 +17,7 @@ durasi = st.sidebar.select_slider("Target Durasi Baca", options=["7 Menit", "10 
 api_key = st.sidebar.text_input("🔑 Masukkan Gemini API Key", type="password")
 
 st.sidebar.markdown("---")
-st.sidebar.caption("Aplikasi NgoPi v1.0 © 2026")
+st.sidebar.caption("Aplikasi NgoPi v1.1 © 2026")
 
 # Logika Pemrosesan AI
 if st.button("☕ Seduh Teks (Generate)"):
@@ -28,8 +28,11 @@ if st.button("☕ Seduh Teks (Generate)"):
     else:
         with st.spinner("Sedang meracik draf khotbah terbaik... Mohon tunggu sebentar..."):
             try:
+                # Menggunakan konfigurasi client yang kompatibel dengan library lama/baru
                 genai.configure(api_key=api_key)
-                model = genai.GenerativeModel('gemini-1.5-flash')
+                
+                # Menggunakan model versi 2.0-flash yang sangat stabil untuk generate content
+                model = genai.GenerativeModel(model_name='gemini-2.0-flash')
                 
                 prompt_sistem = f"""
                 Anda adalah seorang ulama kharismatik, ahli fikih, dan orator yang bijaksana di masyarakat.
