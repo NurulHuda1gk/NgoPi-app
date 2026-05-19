@@ -18,21 +18,19 @@ durasi = st.sidebar.select_slider("Target Durasi Baca", options=["7 Menit", "10 
 st.sidebar.markdown("---")
 st.sidebar.caption("Aplikasi NgoPi v1.2 © 2026")
 
-# Logika Pemrosesan AI Alternatif Tanpa API Key
+# Logika Pemrosesan AI Alternatif
 if st.button("☕ Seduh Teks (Generate)"):
     if not tema:
         st.warning("Temanya masih kosong nih, silakan diisi dulu ya Pak.")
     else:
         with st.spinner("Sedang meracik draf terbaik secara instan... Mohon tunggu..."):
             try:
-                # Menggunakan API publik gratis tanpa token/key
                 url = "https://openrouter.ai/api/v1/chat/completions"
                 
                 prompt_sistem = f"Buatlah draf teks {jenis_acara} dengan tema: '{tema}' untuk durasi pembacaan {durasi}. Jika ini Khotbah Jumat, wajib mengandung rukun formal khotbah (pujian, shalawat, wasiat takwa, ayat Al-Qur'an, dan doa penutup berbahasa Arab). Gunakan bahasa Indonesia yang sejuk dan menyentuh hati jamaah."
                 
-                # Menggunakan model publik gratis Llama 3
                 payload = {
-                    "model": "meta-llama/llama-3-8b-instruct:free",
+                    "model": "google/gemini-2.5-flash:free",
                     "messages": [{"role": "user", "content": prompt_sistem}]
                 }
                 
