@@ -29,7 +29,7 @@ if st.button("☕ Seduh Teks (Generate)"):
         with st.spinner("Sedang meracik draf khotbah terbaik... Mohon tunggu sebentar..."):
             try:
                 genai.configure(api_key=api_key)
-                model = genai.GenerativeModel('gemini-pro')
+                model = genai.GenerativeModel('gemini-1.5-flash')
                 
                 prompt_sistem = f"""
                 Anda adalah seorang ulama kharismatik, ahli fikih, dan orator yang bijaksana di masyarakat.
