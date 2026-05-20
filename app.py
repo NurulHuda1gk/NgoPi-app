@@ -41,7 +41,7 @@ if st.button("☕ Seduh Teks (Generate)"):
                 
                 # Menggunakan model alternatif gratis yang kapasitasnya sangat longgar
                 payload = {
-                   "model": "google/gemini-2.5-flash:free",
+                   "model": "google/gemini:free",
                    "messages": [{"role": "user", "content": prompt_sistem}]
                 }
                 
